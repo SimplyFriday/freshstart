@@ -1,5 +1,4 @@
 Param(
-
    [Parameter(Mandatory=$true)]
    [string]$BdsUrl,
    [Parameter(Mandatory=$true)]
@@ -17,26 +16,36 @@ Set-Location $PSScriptRoot;
 Write-Host "Stopping kestrel...";
 & service kestrel-freshstartprod stop
 
-# Delete old backup
-Write-Host "Cleaning up old backup...";
-Remove-Item -Path "$($BdsLocalPath)_BACKUP";
-
 # Backup dir
 Write-Host ""Backing up current version;
-Move-Item -Path "$BdsLocalPath" -Destination "$($BdsLocalPath)_BACKUP";
+if (Test-Path "$BdsLocalPath") {
+   Remove-Item "$($BdsLocalPath)_BACKUP" -Force -Recurse;
+} else {
+   Write-Error "ERROR: '$BdsLocalPath' does not exist!";
+   exit -1; 
+}
+Move-Item -Path "$BdsLocalPath" -Destination "$($BdsLocalPath)_BACKUP" -Force;
 
 # Download new version
 Write-Host "Downloading new version from:$BdsUrl...";
-Remove-Item bds_update.zip
+
+if (Test-Path bds_update.zip) {
+   Remove-Item -Path bds_update.zip -Force;
+}
+
+if (Test-Path bds_update) {
+   Remove-Item -Path bds_update -Recurse -Force;
+}
+
 & wget -O bds_update.zip $BdsUrl
 Write-Host "Unzipping...";
-& unzip bds_update.zip
+& unzip bds_update.zip -d bds_update
 
 Move-Item -Path bds_update -Destination $BdsLocalPath;
 
 # Copy tweaks
 Write-Host "Copying tweaks...";
-Copy-Item -Path "$PSScriptRoot/BDS/*" -Destination $BdsLocalPath;
+Copy-Item -Path "$PSScriptRoot/BDS/*" -Destination $BdsLocalPath -Force;
 
 Write-Host "Copying world to new location..."
 Copy-Item -Path "$($BdsLocalPath)_BACKUP/worlds" -Destination "$BdsLocalPath"
