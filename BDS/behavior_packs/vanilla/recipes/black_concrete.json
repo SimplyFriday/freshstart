@@ -1,0 +1,29 @@
+{
+	"format_version": "1.14.3",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:black_concrete"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"###",
+			"# #",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:concrete_powder",
+				"data": 15
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:concrete",
+				"data": 15,
+				"count": 8
+			}
+		]
+	}
+}
