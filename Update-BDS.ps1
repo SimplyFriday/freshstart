@@ -45,7 +45,7 @@ Move-Item -Path bds_update -Destination $BdsLocalPath;
 
 # Copy tweaks
 Write-Host "Copying tweaks...";
-Copy-Item -Path "$PSScriptRoot/BDS/*" -Destination $BdsLocalPath -Force;
+Copy-Item -Path "$PSScriptRoot/BDS/*" -Destination $BdsLocalPath -Force -Recurse;
 
 Write-Host "Copying world to new location..."
 Copy-Item -Path "$($BdsLocalPath)_BACKUP/worlds" -Destination "$BdsLocalPath"
