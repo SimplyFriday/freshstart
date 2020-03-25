@@ -1,0 +1,402 @@
+{
+  "tiers": [
+    {
+      "groups": [
+        {
+          "num_to_select": 4,
+          "trades": [
+            {
+              "max_uses": 4,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 20
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:slime_ball",
+                  "quantity": 16
+                }
+              ]
+            },
+            {
+              "max_uses": 1,
+              "wants": [
+                {
+                  "item": "minecraft:diamond",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:dye",
+                  "quantity": 64,
+                  "functions": [
+                    {
+                      "function": "random_aux_value",
+                      "values": {
+                        "min": 0,
+                        "max": 15
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 15,
+                  "price_multiplier": 0.1
+                },
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:book",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_book_for_trading",
+                      "base_cost": 2,
+                      "base_random_cost": 5,
+                      "per_level_random_cost": 10,
+                      "per_level_cost": 3
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 8
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:iron_block",
+                  "quantity": 2,
+                  "price_multiplier": 0.1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:iron_pickaxe",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": {
+                        "min": 30,
+                        "max": 30
+                      }
+                    }
+                  ]
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 5
+            },
+            {
+              "max_uses": 16,
+              "wants": [
+                {
+                  "item": "minecraft:emerald",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "choice": [
+                    {
+                      "item": "minecraft:wheat_seeds",
+                      "quantity": 16
+                    },
+                    {
+                      "item": "minecraft:pumpkin_seeds",
+                      "quantity": 16
+                    },
+                    {
+                      "item": "minecraft:melon_seeds",
+                      "quantity": 16
+                    },
+                    {
+                      "item": "minecraft:beetroot_seeds",
+                      "quantity": 16
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "num_to_select": 2,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:diamond_block",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond_axe",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": {
+                        "min": 30,
+                        "max": 30
+                      }
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 3
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:diamond_block",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond_sword",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": {
+                        "min": 30,
+                        "max": 30
+                      }
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 5
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:diamond_block",
+                  "quantity": 2,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond_leggings",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": {
+                        "min": 30,
+                        "max": 30
+                      }
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 3
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:diamond_block",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond_boots",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": {
+                        "min": 30,
+                        "max": 30
+                      }
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 3
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:diamond_block",
+                  "quantity": 1,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond_helmet",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": {
+                        "min": 30,
+                        "max": 30
+                      }
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 3
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:diamond_block",
+                  "quantity": 2,
+                  "price_multiplier": 0.05
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond_chestplate",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": {
+                        "min": 30,
+                        "max": 30
+                      }
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 3
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:diamond",
+                  "quantity": 5,
+                  "price_multiplier": 0.1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond_shovel",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": {
+                        "min": 30,
+                        "max": 30
+                      }
+                    }
+                  ]
+                }
+              ],
+              "trader_exp": 20,
+              "max_uses": 5
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:diamond_block",
+                  "quantity": 1,
+                  "price_multiplier": 0.1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:diamond_pickaxe",
+                  "quantity": 1,
+                  "functions": [
+                    {
+                      "function": "enchant_with_levels",
+                      "treasure": false,
+                      "levels": {
+                        "min": 30,
+                        "max": 30
+                      }
+                    }
+                  ]
+                }
+              ],
+              "max_uses": 5
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:gold_block",
+                  "quantity": 4
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:gunpowder",
+                  "quantity": 64
+                }
+              ],
+              "max_uses": 2
+            },
+            {
+              "wants": [
+                {
+                  "item": "minecraft:diamond",
+                  "quantity": 8
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:obsidian",
+                  "quantity": 64
+                }
+              ],
+              "max_uses": 2
+            }
+          ]
+        },
+        {
+          "num_to_select": 1,
+          "trades": [
+            {
+              "wants": [
+                {
+                  "item": "minecraft:diamond",
+                  "quantity": 1
+                }
+              ],
+              "gives": [
+                {
+                  "item": "minecraft:iron_ingot",
+                  "quantity": 32
+                }
+              ],
+              "max_uses": 999
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
