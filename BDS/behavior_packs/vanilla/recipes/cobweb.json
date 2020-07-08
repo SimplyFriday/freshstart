@@ -1,17 +1,27 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "# #",
-        " # ",
-        "# #"
-    ],
-    "key": {
-        "#": {
-            "item": "minecraft:string"
-        }
-    },
-    "result": {
-        "item": "minecraft:cobweb",
-        "count": 1
-    }
+	"format_version": "1.14.3",
+	"minecraft:recipe_shaped": {
+		"description": {
+			"identifier": "minecraft:web"
+		},
+		"tags": [
+			"crafting_table"
+		],
+		"pattern": [
+			"###",
+			"###",
+			"###"
+		],
+		"key": {
+			"#": {
+				"item": "minecraft:string"
+			}
+		},
+		"result": [
+			{
+				"item": "minecraft:web",
+				"count": 1
+			}
+		]
+	}
 }
