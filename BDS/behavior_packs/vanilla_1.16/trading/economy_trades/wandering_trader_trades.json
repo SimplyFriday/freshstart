@@ -76,8 +76,8 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:iron_block",
-                  "quantity": 2,
+                  "item": "minecraft:iron_ingot",
+                  "quantity": 20,
                   "price_multiplier": 0.1
                 }
               ],
@@ -86,19 +86,19 @@
                   "item": "minecraft:iron_pickaxe",
                   "quantity": 1,
                   "functions": [
-                    {
-                      "function": "enchant_with_levels",
-                      "treasure": false,
-                      "levels": {
-                        "min": 30,
-                        "max": 30
-                      }
-                    }
-                  ]
+					{
+					  "function": "specific_enchants",
+						"enchants": [
+						  {
+							"id": "fortune",
+							"level": [1, 3]              
+						  }
+					   ]
+					}
+				  ]
                 }
               ],
-              "trader_exp": 20,
-              "max_uses": 5
+              "max_uses": 1
             },
             {
               "max_uses": 16,
@@ -139,7 +139,7 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:diamond_block",
+                  "item": "minecraft:emerald",
                   "quantity": 1
                 }
               ],
@@ -164,7 +164,7 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:diamond_block",
+                  "item": "minecraft:emerald",
                   "quantity": 1,
                   "price_multiplier": 0.05
                 }
@@ -190,7 +190,7 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:diamond_block",
+                  "item": "minecraft:emerald",
                   "quantity": 2,
                   "price_multiplier": 0.05
                 }
@@ -216,7 +216,7 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:diamond_block",
+                  "item": "minecraft:emerald",
                   "quantity": 1,
                   "price_multiplier": 0.05
                 }
@@ -242,7 +242,7 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:diamond_block",
+                  "item": "minecraft:emerald",
                   "quantity": 1,
                   "price_multiplier": 0.05
                 }
@@ -268,7 +268,7 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:diamond_block",
+                  "item": "minecraft:emerald",
                   "quantity": 2,
                   "price_multiplier": 0.05
                 }
@@ -321,7 +321,7 @@
             {
               "wants": [
                 {
-                  "item": "minecraft:diamond_block",
+                  "item": "minecraft:emerald",
                   "quantity": 1,
                   "price_multiplier": 0.1
                 }
